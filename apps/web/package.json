@@ -1,22 +1,30 @@
 {
-  "name": "web",
+  "name": "@sixthfin-auth/apps-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --clearScreen false",
+    "dev": "dotenvx run --env-file=../../envs/.env.local -- vite --clearScreen false",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
-    "@repo/ui": "*"
+    "@sixthfin-auth/core-ui": "*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^7.0.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@dotenvx/dotenvx": "^1.28.0",
+    "@sixthfin-auth/eslint-config": "*",
+    "@sixthfin-auth/typescript-config": "*",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "babel-plugin-formatjs": "^10.5.26",
     "eslint": "^8.57.0",
-    "typescript": "5.5.4",
+    "typescript": "5.7.2",
     "vite": "^5.1.4"
   }
 }

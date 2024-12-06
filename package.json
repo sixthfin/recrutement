@@ -1,4 +1,5 @@
 {
+  "name": "@sixthfin-auth/root",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -11,10 +12,16 @@
     "prettier": "^3.2.5",
     "turbo": "^2.3.3"
   },
-  "name": "with-vite",
   "packageManager": "npm@10.9.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
-  ]
+    "configs/*",
+    "envs",
+    "packages/core/*",
+    "packages/feat-users/*",
+    "packages/infra-postgres/*"
+  ],
+  "dependencies": {
+    "drizzle-orm": "^0.37.0"
+  }
 }

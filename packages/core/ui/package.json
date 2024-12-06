@@ -1,0 +1,17 @@
+{
+  "name": "@sixthfin-auth/core-ui",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@sixthfin-auth/eslint-config": "*",
+    "@sixthfin-auth/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2"
+  }
+}

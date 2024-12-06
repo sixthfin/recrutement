@@ -1,0 +1,27 @@
+{
+  "name": "@sixthfin-auth/feat-users-api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "@sixthfin-auth/core-api": "*",
+    "@sixthfin-auth/core-shared": "*",
+    "@sixthfin-auth/feat-users-shared": "*",
+    "@sixthfin-auth/infra-postgres-core": "*",
+    "@ts-rest/core": "^3.51.0",
+    "@ts-rest/express": "^3.51.0",
+    "express": "^4.21.2",
+    "nanoid": "^5.0.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@sixthfin-auth/eslint-config": "*",
+    "@sixthfin-auth/typescript-config": "*",
+    "@types/express": "^4.17.21",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2"
+  }
+}

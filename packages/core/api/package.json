@@ -1,0 +1,25 @@
+{
+  "name": "@sixthfin-auth/core-api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "@sixthfin-auth/core-shared": "*",
+    "drizzle-orm": "^0.37.0",
+    "pg": "^8.13.1",
+    "nanoid": "^5.0.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.24.2",
+    "@sixthfin-auth/eslint-config": "*",
+    "@sixthfin-auth/typescript-config": "*",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.11.10",
+    "eslint": "^8.57.0",
+    "typescript": "^5.7.2"
+  }
+}

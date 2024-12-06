@@ -1,0 +1,7 @@
+{
+  "name": "@sixthfin-auth/local-env",
+  "private": true,
+  "scripts": {
+    "dev": "docker run --name sixthfin-auth-postgres -e POSTGRES_PASSWORD=mypassword -d -p 5432:5432 postgres"
+  }
+}

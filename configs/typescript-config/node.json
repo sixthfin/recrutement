@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./base.json",
+    "compilerOptions": {
+      "lib": ["ESNext"],
+      "module": "nodenext",
+      "moduleResolution": "nodenext",
+      "target": "esnext",
+      "esModuleInterop": true,
+      "allowImportingTsExtensions": true,
+      "rewriteRelativeImportExtensions": true,
+      "verbatimModuleSyntax": true
+    }
+  }
+  
