@@ -22,11 +22,11 @@ module.exports = {
         customGroups: {
           type: {
             core: ["react", "zod"],
-            workspace: "@sixthfin-auth/**",
+            workspace: "@sixthfin-auth/*",
           },
           value: {
             core: ["react", "react-dom/client", "zod"],
-            workspace: "@sixthfin-auth/**",
+            workspace: "@sixthfin-auth/*",
           },
         },
         groups: [

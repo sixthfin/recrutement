@@ -1,11 +1,19 @@
 export type Result<F, S> = Err<F> | Ok<S>;
 
 export class Err<F> {
-  constructor(readonly failure: F) {}
+  readonly failure;
+
+  constructor(failure: F) {
+    this.failure = failure;
+  }
 }
 
 export class Ok<S> {
-  constructor(readonly success: S) {}
+  readonly success;
+
+  constructor(success: S) {
+    this.success = success;
+  }
 }
 
 function err<const F>(failure: F): Result<F, never> {

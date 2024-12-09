@@ -1,5 +1,6 @@
-import { defineConfig } from "drizzle-kit";
 import z from "zod";
+
+import { defineConfig } from "drizzle-kit";
 
 const Configuration = z.object({
   DATABASE_URL: z.string(),
@@ -8,10 +9,10 @@ const Configuration = z.object({
 const configuration = Configuration.parse(process.env);
 
 export default defineConfig({
-  out: "./drizzle",
-  schema: "./src/schema.ts",
-  dialect: "postgresql",
   dbCredentials: {
     url: configuration.DATABASE_URL,
   },
+  dialect: "postgresql",
+  out: "./drizzle",
+  schema: "./src/schema.ts",
 });

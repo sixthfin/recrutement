@@ -1,4 +1,5 @@
 import { z } from "zod";
+
 import type { Simplify } from "./types.ts";
 
 type WithId<Schema extends z.ZodObject<z.ZodRawShape>> =
@@ -16,14 +17,18 @@ export function WithId<const Schema extends z.ZodObject<z.ZodRawShape>>(
 }
 
 const PaginatedShape = {
-  total: z.number(),
   next: z.string().optional(),
+  total: z.number(),
 };
 
+export type Infer<T> = Simplify<{
+  [K in keyof T]: T[K] extends z.ZodType ? z.output<T[K]> : Infer<T[K]>;
+}>;
+
 type Paginated<Schema extends z.ZodObject<z.ZodRawShape>> = z.ZodObject<
-  {
+  typeof PaginatedShape & {
     results: z.ZodArray<Schema>;
-  } & typeof PaginatedShape
+  }
 >;
 
 export function Paginated<const Schema extends z.ZodObject<z.ZodRawShape>>(
@@ -34,7 +39,3 @@ export function Paginated<const Schema extends z.ZodObject<z.ZodRawShape>>(
     results: z.array(schema),
   });
 }
-
-export type Infer<T> = Simplify<{
-  [K in keyof T]: T[K] extends z.ZodType ? z.output<T[K]> : Infer<T[K]>;
-}>;

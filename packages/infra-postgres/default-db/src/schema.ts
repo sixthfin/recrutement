@@ -1,8 +1,8 @@
 import { pgTable, text } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
-  id: text("id").primaryKey(),
   firstname: text("firstname").notNull(),
+  id: text("id").primaryKey(),
   lastname: text("lastname").notNull(),
 });
 

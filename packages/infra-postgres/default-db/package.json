@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
     "db:studio": "dotenvx run --env-file=../../../envs/.env.local -- drizzle-kit studio --port 3004",
-    "db:push": "dotenvx run --env-file=../../../envs/.env.local -- drizzle-kit push"
+    "db:push": "dotenvx run --env-file=../../../envs/.env.local -- drizzle-kit push",
+    "db:generate": "dotenvx run --env-file=../../../envs/.env.local -- drizzle-kit generate"
   },
   "exports": {
     ".": "./src/index.ts"

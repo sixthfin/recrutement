@@ -1,8 +1,8 @@
-import { Module } from "@sixthfin-auth/core-shared";
 import {
   type PostgresConfiguration,
   PostgresService,
 } from "@sixthfin-auth/infra-postgres-core";
+import { Module } from "@sixthfin-auth/core-shared";
 
 import { PostgresUsersStore } from "./postgres-users.store.ts";
 
