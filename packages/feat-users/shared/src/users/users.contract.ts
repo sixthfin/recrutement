@@ -1,4 +1,5 @@
 import { initContract } from "@ts-rest/core";
+
 import { UsersProtocol } from "./users.protocol.ts";
 
 const c = initContract();

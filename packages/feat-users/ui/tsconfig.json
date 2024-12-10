@@ -1,0 +1,5 @@
+{
+  "extends": "@sixthfin-auth/typescript-config/react.json",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
