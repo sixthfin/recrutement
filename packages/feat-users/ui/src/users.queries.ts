@@ -11,6 +11,13 @@ export class UsersQueries extends Module<{ apiBaseUrl: string }> {
     jsonQuery: true,
   });
 
+  findeOneQuery(userId: string) {
+    return queryOptions({
+      queryFn: () => this.client.findOne({ params: { userId } }),
+      queryKey: [UsersQueries.name, this.findeOneQuery.toString(), userId],
+    });
+  }
+
   listQuery() {
     return queryOptions({
       queryFn: () => this.client.list(),

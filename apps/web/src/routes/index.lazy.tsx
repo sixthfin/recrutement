@@ -1,19 +1,25 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
-import { useSuspenseQuery } from "@tanstack/react-query";
+import { createLazyFileRoute, useRouter } from "@tanstack/react-router";
 
-import { Stack, Text } from "@mantine/core";
+import { UsersListPage } from "@sixthfin-auth/feat-users-ui";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
 function Index() {
+  const router = useRouter();
   const routeContext = Route.useRouteContext();
-  const users = useSuspenseQuery(routeContext.userQueries.listQuery());
 
   return (
-    <Stack p="md">
-      <Text>There are {users.data.body.total} users</Text>
-    </Stack>
+    <UsersListPage
+      createUserLink={router.buildLocation({ to: "/users/new" }).href}
+      updateUserLink={(userId) =>
+        router.buildLocation({
+          params: { userId },
+          to: "/users/$userId/update",
+        }).href
+      }
+      usersQueries={routeContext.userQueries}
+    />
   );
 }

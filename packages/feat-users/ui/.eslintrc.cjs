@@ -6,4 +6,7 @@ module.exports = {
   ],
   plugins: ["@tanstack/query"],
   root: true,
+  rules: {
+    "@tanstack/query/infinite-query-property-order": "off",
+  },
 };
